@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/booking_drawable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/gradient_bg"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="4"
+    tools:context=".Booking">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:weightSum="2">
+        <ProgressBar
+            android:id="@+id/book_progressBar"
+            android:indeterminate="true"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:visibility="invisible"
+            style="?android:attr/progressBarStyleHorizontal"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/linear_origin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/toolbar_book">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Origin             :"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_origin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_origin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Destination        : "
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_travellers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_destination">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="No. of Travellers  : "
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_numOfTravellers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_trips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_travellers">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="No. of Trips       : "
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_trips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_travel_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_trips">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Date of Travel     : "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_travel_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:typeface="monospace"
+                    android:padding="10dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_time_to_depart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_travel_date">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Time to depart     : "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_time_to_depart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:padding="10dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_time_to_depart">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Distance of Travel : "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_individual_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_distance">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Cost of travel     : "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_individual_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:typeface="monospace"
+                    android:padding="10dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_total_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_individual_cost">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Total Cost         : "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_total_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:typeface="monospace"
+                    android:padding="10dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_appx_ar_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_total_cost">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Appx arrival time  : "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_appx_arr_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:typeface="monospace"
+                    android:padding="10dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_appx_ar_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_appx_ar_time">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Appx arrival date  : "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_appx_arr_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:typeface="monospace"
+                    android:padding="10dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="20dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_appx_ar_date">
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="casual"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:backgroundTint="#FDD835"
+                    app:rippleColor="#3EEABCD7"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Continue" />
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="casual"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:backgroundTint="#FDD835"
+                    app:rippleColor="#3EEABCD7"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Edit" />
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="casual"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:backgroundTint="#FDD835"
+                    app:rippleColor="#3EEABCD7"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Cancel" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_buttons_i"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear_buttons">
+                <Button
+                    android:id="@+id/btn_map_origin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="casual"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:backgroundTint="#FDD835"
+                    app:rippleColor="#3EEABCD7"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Pick Up" />
+                <Button
+                    android:id="@+id/btn_map_destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginStart="19dp"
+                    android:fontFamily="casual"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:backgroundTint="#FDD835"
+                    app:rippleColor="#3EEABCD7"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:text="Drop off" />
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_book"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_bg"
+                android:fontFamily="casual"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/menu"
+                app:title="@string/app_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_booking_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

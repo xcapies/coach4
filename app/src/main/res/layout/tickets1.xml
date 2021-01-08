@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tickets_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    app:cardBackgroundColor="@color/background_card"
+    >
+<!--    android:backgroundTint="#815F09"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="TICKET ID : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="ORIGIN : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="DESTINATION : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="DISTANCE (KM) : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="T.P.D : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="TRAVELLERS : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="TRIPS : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="T. COST : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="I. COST : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="D. TIME : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="D. DATE : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="A. TIME : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="A. DATE : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="LIVE    : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_gravity="fill_vertical"
+            android:orientation="vertical"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/hist_ticket_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="TICKET ID : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_origin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="ORIGIN : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_destination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="DESTINATION : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="DISTANCE (KM) : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_tpd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="T.P.D : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_travellers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="TRAVELLERS : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_trips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="TRIPS : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_t_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="T. COST : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_i_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="I. COST : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_d_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="D. TIME : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_d_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="D. DATE : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_a_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="A. TIME : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_a_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="A. DATE : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/hist_ticket_live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="A. DATE : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_drawable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/gradient_bg"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="1dp"
+    android:weightSum="4"
+    tools:context=".Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                <LinearLayout
+                    android:id="@+id/linear_btns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radio_group"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radio_group">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_book"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="casual"
+                        android:text="@string/book"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:typeface="monospace"
+                        android:backgroundTint="#FDD835"
+                        app:rippleColor="#3EEABCD7"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/map"
+                        android:fontFamily="casual"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:typeface="monospace"
+                        android:backgroundTint="#FDD835"
+                        app:rippleColor="#3EEABCD7"
+                        style="@style/Widget.MaterialComponents.Button"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_logout"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="casual"
+                        android:text="@string/logout"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:typeface="monospace"
+                        android:backgroundTint="#FDD835"
+                        app:rippleColor="#3EEABCD7"/>
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_date"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/linear_btns">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/rbtn_single"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:checked="true"
+                        android:fontFamily="casual"
+                        android:padding="5dp"
+                        android:text="@string/single_trip"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:typeface="monospace" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/rbtn_round"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="casual"
+                        android:padding="5dp"
+                        android:text="@string/round_trip"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:typeface="monospace" />
+                </RadioGroup>
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Caption"
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/btn_time"
+                    android:layout_toEndOf="@+id/btn_time"
+                    android:hint="@string/travelling_time"
+                    android:paddingBottom="10dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:fontFamily="casual"
+                    android:typeface="monospace"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/btn_date"
+                    android:layout_toEndOf="@+id/btn_date"
+                    android:hint="@string/travelling_date"
+                    android:paddingBottom="10dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:fontFamily="casual"
+                    android:typeface="monospace"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_numsOfTravs"
+                    android:text="@string/time"
+                    android:layout_margin="15dp"
+                    android:fontFamily="casual"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:backgroundTint="#FDD835"
+                    app:rippleColor="#3EEABCD7"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_date"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_time"
+                    android:layout_margin="15dp"
+                    android:fontFamily="casual"
+                    android:text="@string/date"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:backgroundTint="#FDD835"
+                    app:rippleColor="#3EEABCD7"/>
+
+                <NumberPicker
+                    android:id="@+id/et_numsOfTravs"
+                    android:layout_width="123dp"
+                    android:layout_height="43dp"
+                    android:layout_alignBottom="@+id/tv_numbers"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toEndOf="@+id/tv_numbers"
+                    android:gravity="center_horizontal"
+                    android:backgroundTint="#FDD835"
+                    android:hint="@string/number_of_travellers" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spinner_from"
+                    android:layout_margin="5dp"
+                    android:fontFamily="casual"
+                    android:padding="5dp"
+                    android:text="@string/select_your_destination"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_numbers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spinner_to"
+                    android:layout_margin="5dp"
+                    android:fontFamily="casual"
+                    android:padding="5dp"
+                    android:text="@string/number_of_travellers"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="casual"
+                    android:padding="5dp"
+                    android:text="@string/select_where_to_depart_from"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace" />
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_from"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:padding="5dp"
+                    app:ms_text_color="@android:color/black" />
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_to"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:padding="5dp"
+                    app:ms_text_color="@android:color/black" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_bg"
+                android:fontFamily="casual"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/menu"
+                app:title="@string/app_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

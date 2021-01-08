@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "523478622080",
+    "firebase_url": "https://coacher-v3.firebaseio.com",
+    "project_id": "coacher-v3",
+    "storage_bucket": "coacher-v3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523478622080:android:d5d02b0d3ac5f193626b65",
+        "android_client_info": {
+          "package_name": "com.tuk.coacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523478622080-0kitp5cbbld54e2ga9tkl148uab8buat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz68AHHbqjAXhNRFogtzOdxlKYAH6tsh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523478622080-0kitp5cbbld54e2ga9tkl148uab8buat.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

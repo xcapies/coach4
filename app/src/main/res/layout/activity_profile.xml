@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_drawable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/gradient_bg"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="1dp"
+    android:weightSum="4"
+    tools:context=".Profile"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_toolbar">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:weightSum="1">
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:src="@drawable/profile_pic"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:padding="5dp"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="PROFILE_TAG"
+                        android:layout_marginTop="15dp"
+                        android:textSize="25sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Full Name : "
+                            android:textSize="20sp"
+                            />
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/prof_full_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Full Name Dummy"
+                            android:textSize="20sp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Email      : "
+                            android:textSize="20sp"
+                            />
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/prof_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Full Name Dummy"
+                            android:textSize="20sp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone No. : "
+                            android:textSize="20sp"
+                            />
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/prof_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Full Name Dummy"
+                            android:textSize="20sp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Username  : "
+                            android:textSize="20sp"
+                            />
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/prof_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Full Name Dummy"
+                            android:textSize="20sp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:weightSum="1">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/prof_edit_prof_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Edit profile"
+                            android:textSize="25sp"
+                            app:rippleColor="#424242"
+                            android:textColor="#050D57"
+                            android:backgroundTint="#00000000"
+                            />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/prof_change_pass_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Change password"
+                            android:textSize="25sp"
+                            app:rippleColor="#424242"
+                            android:textColor="#050657"
+                            android:backgroundTint="#00000000"
+                            />
+                        <com.google.android.material.button.MaterialButton
+
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/prof_upload_img_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Profile picture"
+                            app:rippleColor="#424242"
+                            android:textColor="#052357"
+                            android:backgroundTint="#00000000"
+                            />
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/prof_delete_acc_btn"
+                            android:text="Delete Account"
+                            app:rippleColor="#424242"
+                            android:textColor="#570F05"
+                            android:backgroundTint="#00000000"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/profile_toolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_bg"
+                android:fontFamily="casual"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/menu"
+                app:title="@string/app_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_profile_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

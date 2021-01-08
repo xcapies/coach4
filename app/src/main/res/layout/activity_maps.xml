@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:background="@drawable/gradient_bg"
+        android:id="@+id/search_tab"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_map_search"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="GO" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="Enter place"
+            android:id="@+id/te_map_search"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="5"
+            android:layout_width="match_parent" />
+
+    </LinearLayout>
+    <fragment
+        android:id="@+id/map"
+        android:layout_below="@+id/search_tab"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Maps"/>
+</RelativeLayout>

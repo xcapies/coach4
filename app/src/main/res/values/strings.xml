@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Coacher</string>
+    <string name="navigation_drawer_close"></string>
+    <string name="navigation_drawer_open"></string>
+    <string name="login">Login</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <string name="register">REGISTER</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_directions_key">AIzaSyDIGXSLeaRq9BZJIx6XkGMiMxAJeBuaLoo</string>
+    <string name="book">Book</string>
+    <string name="select_where_to_depart_from">Select Where To Depart From</string>
+    <string name="number_of_travellers">Number of Travellers</string>
+    <string name="time">Time</string>
+    <string name="travelling_time">Travelling Time</string>
+    <string name="select_your_destination">Select Your Destination</string>
+    <string name="single_trip">Single trip</string>
+    <string name="round_trip">Round Trip</string>
+    <string name="travelling_date">Travelling Date</string>
+    <string name="logout">Logout</string>
+    <string name="map">Map</string>
+    <string name="date">Date</string>
+    <string name="title_activity_admin_loggin">Admin_loggin</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_admin_home">Admin_home</string>
+</resources>
